@@ -1,5 +1,4 @@
 import hashlib
-
 def register():
     username = input("Enter username: ")
     password = input("Enter password: ")
@@ -58,7 +57,6 @@ def mark_task_completed(username):
     with open(f"{username}_tasks.txt", 'w') as file:
         for index, task in enumerate(tasks, start=1):
             task_name, completed = task.strip().split(',')
-            print(index)
             if index == task_no:
                 file.write(f"{task_name},True\n")  # Mark the task as completed
             else:
